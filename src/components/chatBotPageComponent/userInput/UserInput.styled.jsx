@@ -7,10 +7,10 @@ export const UserInputContainer = styled.div`
   border: 2.5px solid #415058;
   border-radius: 2vw;
   background-color: white;
-  width: calc(100% - 4vh);
+  width: 90%;
   height: 7.7vh;
   position: fixed;
-  bottom: 1.8vh;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
@@ -20,7 +20,7 @@ export const UserTextInput = styled.input`
   flex: 1;
   border: none;
   outline: none;
-  padding: 3vw;
+  padding: 1rem;
   font-size: 4vw;
   background-color: transparent;
 `;

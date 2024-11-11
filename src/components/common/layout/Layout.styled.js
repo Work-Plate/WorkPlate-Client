@@ -2,9 +2,7 @@
 import styled from "@emotion/styled";
 
 export const LayoutContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  // aspect-ratio: 9 / 20; //비율로 처리
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -15,8 +13,8 @@ export const LayoutContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  flex: 1;
+  /* flex: 1; */
   width: 100%;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 `;

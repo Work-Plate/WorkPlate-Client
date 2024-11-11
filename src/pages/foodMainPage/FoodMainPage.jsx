@@ -26,6 +26,7 @@ const FoodMainPage = () => {
       <FoodPageContainer>
         <FoodScrollBox>
           <SideScrollBox images={images} />
+          
         </FoodScrollBox>
       </FoodPageContainer>
     </Layout>
