@@ -7,14 +7,14 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 8vh 3vw 3.5vh 3vw; */
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 4rem 1rem 1.5rem 1rem;
+  box-shadow: 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 `;
 
 export const Title = styled.h1`
-  /* padding: 0.5vw 0 0 0;
-  font-size: 5vw; */
+  padding: 0.5rem 0 0 0;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -35,6 +35,6 @@ export const Button = styled.button`
 `;
 
 export const Icon = styled.img`
-  /* width: 5vw;
-  height: 5vw; */
+  width: 1.5rem;
+  height: 1.5rem;
 `;

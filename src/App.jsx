@@ -1,9 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
-import ChatBotPage from "./pages/chatBotPage/ChatBotPage";
-// import { GlobalStyle } from "./styles/global";
+//import ChatBotPage from "./pages/chatBotPage/ChatBotPage";
 import { Global, css } from "@emotion/react";
+import FoodMainPage from "./pages/foodMainPage/FoodMainPage";
 import styled from "@emotion/styled";
-import { Outlet } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -190,7 +189,7 @@ function App() {
           `}
         />
         <Wrapper>
-          <ChatBotPage />
+          <FoodMainPage />
         </Wrapper>
       </BrowserRouter>
     </>

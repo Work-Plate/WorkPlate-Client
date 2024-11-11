@@ -2,7 +2,6 @@
 import styled from "@emotion/styled";
 
 export const LayoutContainer = styled.div`
-  min-height: 100vh;
   width: 100%;
   margin: 0 auto;
   display: flex;
