@@ -128,6 +128,7 @@ const baseStyle = css`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f4f6ff;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
     scroll-behavior: smooth;
@@ -161,7 +162,7 @@ const baseStyle = css`
 
   body {
     width: 100%;
-    max-width: 430px;
+    max-width: 520px;
     overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
