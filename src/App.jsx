@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import ChatBotPage from "./pages/chatBotPage/ChatBotPage";
 /** @jsxImportSource @emotion/react */
 import { Global, css } from "@emotion/react";
+import FoodMainPage from "./pages/foodMainPage/FoodMainPage";
 
 const globalStyles = css`
   * {
@@ -24,7 +25,7 @@ function App() {
     <>
       <Global styles={globalStyles} />
       <BrowserRouter>
-        <ChatBotPage />
+        <FoodMainPage />
       </BrowserRouter>
     </>
   );

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { ScrollBoxContainers } from "./ChatScrollBox.styled";
 import Text from "../../common/text/Text";
 import GrayLine from "../../common/grayLine/GrayLine";
+import Typewriter from "typewriter-effect";
 
 const ChatScrollBox = forwardRef(({ children }, ref) => {
   return (
@@ -34,7 +35,18 @@ const ChatScrollBox = forwardRef(({ children }, ref) => {
         align="left"
         margin="3vw 0vw 4vw 5vw"
       >
-        근처에서 크레딧으로 식사 가능한 곳을 알려드려요
+        <Typewriter
+          options={{
+            autoStart: true,
+            loop: false,
+            delay: 100,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("근처에서 크레딧으로 식사 가능한 곳을 알려드려요")
+              .start();
+          }}
+        />
       </Text>
 
       <GrayLine width="90vw" thickness="0.3vw" />
@@ -55,7 +67,18 @@ const ChatScrollBox = forwardRef(({ children }, ref) => {
         align="left"
         margin="3vw 0vw 4vw 5vw"
       >
-        30분 거리에 있는 소일거리를 찾아드릴게요
+        <Typewriter
+          options={{
+            autoStart: true,
+            loop: false,
+            delay: 150,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("30분 거리에 있는 소일거리를 찾아드릴게요")
+              .start();
+          }}
+        />
       </Text>
       <GrayLine width="90vw" thickness="0.3vw" />
       {children}
