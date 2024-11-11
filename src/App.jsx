@@ -1,11 +1,32 @@
 import { BrowserRouter } from "react-router-dom";
-import RecommendPage from "./pages/recommendPage/RecommendPage";
+import ChatBotPage from "./pages/chatBotPage/ChatBotPage";
+/** @jsxImportSource @emotion/react */
+import { Global, css } from "@emotion/react";
+
+const globalStyles = css`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+`;
 
 function App() {
   return (
-    <BrowserRouter>
-      <RecommendPage />
-    </BrowserRouter>
+    <>
+      <Global styles={globalStyles} />
+      <BrowserRouter>
+        <ChatBotPage />
+      </BrowserRouter>
+    </>
   );
 }
 
