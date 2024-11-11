@@ -4,9 +4,9 @@ export const Wrapper = styled.div`
   position: fixed;
   bottom: 1rem;
   width: 100%;
-  height: 2rem;
+  height: 4.375rem;
   max-width: 520px;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -20,6 +20,7 @@ export const NavigationBtn = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  cursor: pointer;
 `;
 
 export const BtnImage = styled.img`
