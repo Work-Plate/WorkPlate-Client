@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import ChatBotPage from "./pages/chatBotPage/ChatBotPage";
+//import ChatBotPage from "./pages/chatBotPage/ChatBotPage";
 import { Global, css } from "@emotion/react";
 import FoodMainPage from "./pages/foodMainPage/FoodMainPage";
 import styled from "@emotion/styled";
@@ -189,7 +189,7 @@ function App() {
           `}
         />
         <Wrapper>
-          <ChatBotPage />
+          <FoodMainPage />
         </Wrapper>
       </BrowserRouter>
     </>

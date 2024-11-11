@@ -7,21 +7,21 @@ const FoodScrollBox = ({ children }) => {
   return (
     <ScrollBoxContainers>
       <Text
-        size="6vw"
+        size="1.4rem"
         color="#0C0E27"
-        weight="500"
+        weight="700"
         align="left"
-        margin="6.2vw 0vw 0vw 5vw"
+        margin="2rem 0 0 1rem"
       >
         김영수 님,
       </Text>
 
       <Text
-        size="4vw"
+        size="1.3rem"
         color="#0C0E27"
         weight="400"
         align="left"
-        margin="3vw 0vw 4vw 5vw"
+        margin="0.4rem 0 0 1rem"
       >
         <Typewriter
           options={{
@@ -32,7 +32,7 @@ const FoodScrollBox = ({ children }) => {
           onInit={(typewriter) => {
             typewriter
               .typeString(
-                " 식사 잘 챙기고 계신가요? \n 오늘도 따뜻한 식사를 준비해드릴게요"
+                " 식사 잘 챙기고 계신가요? <br> 오늘도 따뜻한 식사를 준비해드릴게요."
               )
               .start();
           }}
@@ -40,11 +40,11 @@ const FoodScrollBox = ({ children }) => {
       </Text>
 
       <Text
-        size="4.5vw"
+        size="1.6rem"
         color="#0C0E27"
         weight="700"
         align="left"
-        margin="5vw 0vw 0vw 4vw"
+        margin="1.5rem 0 0.8rem 1rem"
       >
         내 근처 밥상
       </Text>

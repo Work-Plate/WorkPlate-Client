@@ -3,6 +3,8 @@ import SubHeader from "../../components/common/subheader/SubHeader";
 import { FoodPageContainer, SubHeaderFixed } from "./FoodMainPage.styled";
 import FoodScrollBox from "../../components/foodMainPageComponents/foodScrollBox/FoodScrollBox";
 import SideScrollBox from "../../components/foodMainPageComponents/sideScrollBox/SideScrollBox";
+import AdvertisementButton from "../../components/foodMainPageComponents/advertisementButton/AdvertisementButton";
+import FoodCard from "../../components/foodMainPageComponents/foodCard/FoodCard";
 
 const FoodMainPage = () => {
   const images = [
@@ -26,7 +28,9 @@ const FoodMainPage = () => {
       <FoodPageContainer>
         <FoodScrollBox>
           <SideScrollBox images={images} />
-          
+          <AdvertisementButton />
+          <FoodCard />
+          <FoodCard />
         </FoodScrollBox>
       </FoodPageContainer>
     </Layout>
