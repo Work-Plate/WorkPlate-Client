@@ -19,7 +19,7 @@ const SubHeader = ({
           <Icon src={"./public/icons/back.svg"} />
         </Button>
       ) : (
-        <div style={{ width: "3vw" }} />
+        <div style={{ width: "2vw" }} />
       )}
 
       <Title>{title}</Title>
@@ -29,7 +29,7 @@ const SubHeader = ({
           {rightIcon ? <Icon src={rightIcon} /> : "?"}
         </Button>
       ) : (
-        <div style={{ width: "3vw" }} />
+        <div style={{ width: "2vw" }} />
       )}
     </HeaderContainer>
   );
@@ -41,7 +41,7 @@ SubHeader.propTypes = {
   leftLink: PropTypes.string,
   showRightButton: PropTypes.bool,
   rightLink: PropTypes.string,
-  rightIcon: PropTypes.string, // 아이콘 이미지 URL
+  rightIcon: PropTypes.string,
 };
 
 export default SubHeader;
