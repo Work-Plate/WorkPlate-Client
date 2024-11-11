@@ -6,7 +6,7 @@ import ChatbotTextBalloon from "../../components/chatBotPageComponent/chatbotTex
 import UserTextBalloon from "../../components/chatBotPageComponent/userTextBalloon/UserTextBalloon";
 import UserInput from "../../components/chatBotPageComponent/userInput/UserInput";
 import ChatbotRecommendScroll from "../../components/chatBotPageComponent/chatbotRecommendScroll/ChatbotRecommendScroll";
-import { PageContainer, SubHeaderFixed } from "./ChatBotPage.styled";
+import { PageContainer } from "./ChatBotPage.styled";
 
 const ChatBotPage = () => {
   const images = [
@@ -71,7 +71,7 @@ const ChatBotPage = () => {
 
   return (
     <Layout>
-      <SubHeaderFixed>
+      <PageContainer>
         <SubHeader
           title="밥상일터 도우미"
           showLeftButton={true}
@@ -80,9 +80,7 @@ const ChatBotPage = () => {
           rightLink="/"
           rightIcon="/icons/x.svg"
         />
-      </SubHeaderFixed>
 
-      <PageContainer>
         <ChatScrollBox ref={chatBoxRef}>
           {messages.map((msg, index) => {
             if (msg.sender === "user") {
@@ -97,14 +95,14 @@ const ChatBotPage = () => {
             return null;
           })}
         </ChatScrollBox>
-      </PageContainer>
 
-      <UserInput
-        value={inputValue}
-        onInputChange={handleInputChange}
-        onVoiceClick={handleVoiceClick}
-        onSend={handleSendMessage}
-      />
+        <UserInput
+          value={inputValue}
+          onInputChange={handleInputChange}
+          onVoiceClick={handleVoiceClick}
+          onSend={handleSendMessage}
+        />
+      </PageContainer>
     </Layout>
   );
 };

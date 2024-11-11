@@ -3,22 +3,18 @@ import styled from "@emotion/styled";
 
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 10vh;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8vh 3vw 3.5vh 3vw;
+  /* padding: 8vh 3vw 3.5vh 3vw; */
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  z-index: 1;
 `;
 
 export const Title = styled.h1`
-  padding: 0.5vw 0 0 0;
-  font-size: 5vw;
+  /* padding: 0.5vw 0 0 0;
+  font-size: 5vw; */
   font-weight: bold;
   color: #333;
   text-align: center;
@@ -39,6 +35,6 @@ export const Button = styled.button`
 `;
 
 export const Icon = styled.img`
-  width: 5vw;
-  height: 5vw;
+  /* width: 5vw;
+  height: 5vw; */
 `;
