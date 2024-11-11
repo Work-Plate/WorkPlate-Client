@@ -7,7 +7,7 @@ export const UserInputContainer = styled.div`
   border: 2.5px solid #415058;
   border-radius: 2vw;
   background-color: white;
-  width: calc(100% - 4vh);
+  width: 100%;
   height: 7.7vh;
   position: fixed;
   bottom: 1.8vh;

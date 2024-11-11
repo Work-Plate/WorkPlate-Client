@@ -4,17 +4,17 @@ import styled from "@emotion/styled";
 export const BalloonContainer1 = styled.div`
   display: flex;
   justify-content: flex-start; // 왼쪽
-  padding: 5vw 0 0 4vw;
+  padding: 2rem 0 0 2rem;
 `;
 
 export const Balloon = styled.div`
   max-width: 90%;
   background-color: #ff854c;
   color: white;
-  padding: 2.5vw 4.5vw 1.7vw 4vw;
-  border-radius: 5vw;
+  padding: 1rem;
+  border-radius: 1rem;
   border-bottom-left-radius: 0;
-  font-size: 4.5vw;
+  font-size: 1rem;
   line-height: 1.4;
   font-weight: 400;
   text-align: left;
