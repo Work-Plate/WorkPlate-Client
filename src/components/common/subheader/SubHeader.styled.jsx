@@ -2,18 +2,25 @@
 import styled from "@emotion/styled";
 
 export const HeaderContainer = styled.div`
-  width: 100%;
   background-color: white;
-  display: flex;
-  align-items: center;
+
   justify-content: space-between;
-  padding: 4rem 1rem 1.5rem 1rem;
+  padding: 2rem;
   box-shadow: 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 520px;
+  height: 2.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10;
 `;
 
 export const Title = styled.h1`
-  padding: 0.5rem 0 0 0;
+  padding: 0;
   font-size: 1.4rem;
   font-weight: bold;
   color: #333;
