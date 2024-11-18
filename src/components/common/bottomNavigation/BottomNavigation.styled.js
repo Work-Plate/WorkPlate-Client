@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
   position: fixed;
-  bottom: 1rem;
+  bottom: 0;
   width: 100%;
   height: 4.375rem;
   max-width: 520px;
@@ -22,6 +22,9 @@ export const NavigationBtn = styled.div`
   align-items: center;
   gap: 0.25rem;
   cursor: pointer;
+  border-radius: 50%;
+  background-color: ${({ $isActive }) =>
+    $isActive ? "#FFF2EA" : "transparent"};
 `;
 
 export const BtnImage = styled.img`
@@ -30,11 +33,11 @@ export const BtnImage = styled.img`
 `;
 
 export const NavigationBtnName = styled.p`
-  color: #707e86;
   text-align: center;
   font-family: Pretendard;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  color: ${({ $isActive }) => ($isActive ? "#FF854C" : "#707e86")};
 `;
