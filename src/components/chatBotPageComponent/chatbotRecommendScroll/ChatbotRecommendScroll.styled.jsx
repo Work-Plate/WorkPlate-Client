@@ -5,7 +5,7 @@ export const ScrollContainer = styled.div`
   display: flex;
   overflow-x: auto;
   margin-top: 3vw;
-  margin-left: 4.5vw;
+  margin-left: 1rem;
   gap: 4.5vw;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; // iOS에서 부드러운 스크롤 지원

@@ -16,7 +16,11 @@ const ChatBotPage = () => {
   ];
 
   const [messages, setMessages] = useState([
-    { sender: "user", type: "text", text: "근처 식당 찾아줘" },
+    {
+      sender: "user",
+      type: "text",
+      text: "근처 식당 찾아줘",
+    },
     {
       sender: "bot",
       type: "text",
