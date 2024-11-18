@@ -1,5 +1,8 @@
 import { Outlet } from "react-router-dom";
+import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
+
+import theme from "@styles/theme";
 import { GlobalStyle } from "@styles/style";
 
 const Wrapper = styled.div`
@@ -15,11 +18,14 @@ const Layout = () => {
     </Wrapper>
   );
 };
+
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Layout />
+      <ThemeProvider theme={theme}>
+        <Layout />
+      </ThemeProvider>
     </>
   );
 }
