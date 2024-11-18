@@ -5,6 +5,7 @@ import FoodScrollBox from "../../components/foodMainPageComponents/foodScrollBox
 import SideScrollBox from "../../components/foodMainPageComponents/sideScrollBox/SideScrollBox";
 import AdvertisementButton from "../../components/foodMainPageComponents/advertisementButton/AdvertisementButton";
 import FoodCard from "../../components/foodMainPageComponents/foodCard/FoodCard";
+import { BottomNavigation } from "../../components/common/bottomNavigation/BottomNavigation";
 
 const FoodMainPage = () => {
   const images = [
@@ -33,6 +34,7 @@ const FoodMainPage = () => {
           <FoodCard />
         </FoodScrollBox>
       </FoodPageContainer>
+      <BottomNavigation />
     </Layout>
   );
 };
