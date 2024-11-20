@@ -16,7 +16,7 @@ const SubHeader = ({
     <HeaderContainer>
       {showLeftButton ? (
         <Button onClick={() => navigate(leftLink)}>
-          <Icon src={"./public/icons/back.svg"} />
+          <Icon src={"/icons/back.svg"} />
         </Button>
       ) : (
         <div style={{ width: "2vw" }} />
