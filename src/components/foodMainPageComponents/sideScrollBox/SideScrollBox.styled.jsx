@@ -4,9 +4,8 @@ export const ScrollContainer = styled.div`
   flex-shrink: 0;
   display: flex;
   overflow-x: auto;
-  margin-top: 3vw;
-  margin-left: 4.5vw;
-  gap: 4.5vw;
+  margin-left: 1rem;
+  gap: 1rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; // iOS에서 부드러운 스크롤 지원
 
@@ -19,7 +18,7 @@ export const ScrollContainer = styled.div`
 `;
 
 export const ImageCard = styled.div`
-  width: 65vw;
+  width: 18rem;
   background-color: transparent;
   flex-shrink: 0;
   scroll-snap-align: start; // 스크롤 시 카드가 시작점에 맞춰지도록 설정

@@ -7,6 +7,22 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  server: {
+    proxy: {
+      // /ai 요청은 http://52.78.46.251:8000으로 라우팅
+      "/ai": {
+        target: "http://52.78.46.251:8000",
+        changeOrigin: true, // 요청 헤더의 Origin을 타겟 서버로 변경
+        rewrite: (path) => path.replace(/^\/ai/, ""), // /ai 경로 제거
+      },
+      // /api 요청은 http://52.78.46.251:8080으로 라우팅
+      "/api": {
+        target: "http://52.78.46.251:8080",
+        changeOrigin: true, // 요청 헤더의 Origin을 타겟 서버로 변경
+        rewrite: (path) => path.replace(/^\/api/, ""), // /api 경로 제거
+      },
+    },
+  },
   plugins: [react()],
   resolve: {
     alias: {
