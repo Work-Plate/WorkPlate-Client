@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as S from "./BottomNavigation.styled";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const NAVIGATION_NAME = ["홈", "소일거리", "밥상", "내 정보"];
+const NAVIGATION_NAME = ["홈", "소일거리", "밥상", "QR 결제"];
 
 export const BottomNavigation = () => {
   const [activePageNumber, setActivePageNumber] = useState(0);
@@ -17,7 +17,7 @@ export const BottomNavigation = () => {
     } else if (index === 2) {
       navigate("/food");
     } else {
-      navigate("/");
+      navigate("/main");
       // 수정예정
     }
   };
