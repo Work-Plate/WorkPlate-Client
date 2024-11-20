@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const ScrollBoxContainers = styled.div`
   width: 100%;
-  height: 77vh; // Header UserInput의 높이 제외
+  height: 100%; // Header UserInput의 높이 제외
   padding: 0;
   box-sizing: border-box;
   overflow-y: auto; // 스크롤 가능

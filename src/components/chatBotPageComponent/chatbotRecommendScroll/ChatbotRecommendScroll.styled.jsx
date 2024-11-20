@@ -19,17 +19,18 @@ export const ScrollContainer = styled.div`
 `;
 
 export const ImageCard = styled.div`
-  width: 65vw;
-  background-color: transparent;
+  width: 15rem;
+
+  background-color: #fff; 
   flex-shrink: 0;
   scroll-snap-align: start; // 스크롤 시 카드가 시작점에 맞춰지도록 설정
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  flex-direction: column; // 내부 요소를 세로 정렬
 
-  img {
-    width: 100%;
-    height: 100%;
+  justify-content: center; 
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
 `;

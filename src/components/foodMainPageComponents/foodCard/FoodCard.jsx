@@ -1,12 +1,12 @@
 import { FoodCardContainer } from "./FoodCard.styled";
 import PropTypes from "prop-types";
 
-const FoodCard = ({ onClick }) => {
-  return <FoodCardContainer onClick={onClick} />;
+const FoodCard = ({ imageSrc }) => {
+  return <FoodCardContainer imageSrc={imageSrc} />;
 };
 
 FoodCard.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  imageSrc: PropTypes.string.isRequired,
 };
 
 export default FoodCard;

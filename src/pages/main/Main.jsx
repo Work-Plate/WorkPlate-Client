@@ -3,6 +3,7 @@ import * as S from "./Main.styled";
 import { Header } from "@components/header/Header";
 import { BottomNavigation } from "@components/common/bottomNavigation/BottomNavigation";
 import CloseWork from "@components/workMainPageComponent/closeWork/CloseWork";
+import ChatbotInButton from "../../components/chatBotPageComponent/chatbotInButton/ChatbotInButton";
 export const Main = () => {
   const panelsData = [
     {
@@ -121,6 +122,7 @@ export const Main = () => {
       </S.MainContainer>
       <S.WorkTitle>지금 할 수 있는 소일거리</S.WorkTitle>
       <CloseWork panelsData={panelsData} />
+      <ChatbotInButton />
       <BottomNavigation />
     </S.Layout>
   );

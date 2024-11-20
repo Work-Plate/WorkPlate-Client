@@ -1,10 +1,12 @@
 import { instance } from "./instance";
 
-export const getWorks = async () => {
+export const getWorks = async (id) => {
   try {
-    const response = await instance.get("/api/works");
+    const endpoint = id ? `/api/works/${id}` : "/api/works";
+    const response = await instance.get(endpoint);
 
     if (response.data.success) {
+      console.log(response.data.data);
       return response.data.data;
     } else {
       console.error(response.data.message);
