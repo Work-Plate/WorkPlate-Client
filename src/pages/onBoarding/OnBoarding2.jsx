@@ -24,8 +24,8 @@ export const OnBoarding2 = () => {
   const [next, setNext] = useState("navigate");
   const [active, setActive] = useState(false);
   const [expData, setExpData] = useState(() => {
-    // `localStorage` 초기 데이터 로드
-    const storedData = localStorage.getItem("exp");
+    // `sessionStorage` 초기 데이터 로드
+    const storedData = sessionStorage.getItem("exp");
     return storedData ? JSON.parse(storedData) : [];
   });
 
@@ -40,8 +40,8 @@ export const OnBoarding2 = () => {
         ? prevData.filter((item) => item !== buttonText)
         : [...prevData, buttonText];
 
-      // `localStorage` 업데이트
-      localStorage.setItem("exp", JSON.stringify(updatedData));
+      // `sessionStorage` 업데이트
+      sessionStorage.setItem("exp", JSON.stringify(updatedData));
       return updatedData;
     });
   };
@@ -51,7 +51,7 @@ export const OnBoarding2 = () => {
       <BackNavigation />
       <ProgressBar $now={2} />
       <S.TitleWrapper>
-        <S.MainTitle>{localStorage.getItem("name")}님의</S.MainTitle>
+        <S.MainTitle>{sessionStorage.getItem("name")}님의</S.MainTitle>
         <S.MainTitle>경험을 알려주세요</S.MainTitle>
       </S.TitleWrapper>
       <S.ButtonContainer>

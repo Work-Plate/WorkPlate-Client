@@ -20,7 +20,7 @@ export const OnBoarding1 = () => {
       <BackNavigation />
       <ProgressBar $now={1} />
       <S.TitleWrapper>
-        <S.MainTitle>{localStorage.getItem("name")}님의</S.MainTitle>
+        <S.MainTitle>{sessionStorage.getItem("name")}님의</S.MainTitle>
         {next === "change" ? (
           <S.MainTitle>성별을 알려주세요</S.MainTitle>
         ) : (

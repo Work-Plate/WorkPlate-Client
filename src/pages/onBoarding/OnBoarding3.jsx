@@ -19,7 +19,7 @@ const BTN_DATA = [
 export const OnBoarding3 = () => {
   const [active, setActive] = useState(false); // 다음 버튼 활성화 상태
   const [expData, setExpData] = useState(() => {
-    const storedData = localStorage.getItem("want");
+    const storedData = sessionStorage.getItem("want");
     return storedData ? JSON.parse(storedData) : [];
   });
 
@@ -36,8 +36,8 @@ export const OnBoarding3 = () => {
         ? prevData.filter((item) => item !== buttonText)
         : [...prevData, buttonText];
 
-      // `localStorage` 업데이트
-      localStorage.setItem("want", JSON.stringify(updatedData));
+      // `sessionStorage` 업데이트
+      sessionStorage.setItem("want", JSON.stringify(updatedData));
       return updatedData;
     });
   };
@@ -47,7 +47,7 @@ export const OnBoarding3 = () => {
       <BackNavigation />
       <ProgressBar $now={3} />
       <S.TitleWrapper>
-        <S.MainTitle>{localStorage.getItem("name")}님이 원하시는</S.MainTitle>
+        <S.MainTitle>{sessionStorage.getItem("name")}님이 원하시는</S.MainTitle>
         <S.MainTitle>직무를 알려주세요.</S.MainTitle>
       </S.TitleWrapper>
       <S.ButtonContainer>

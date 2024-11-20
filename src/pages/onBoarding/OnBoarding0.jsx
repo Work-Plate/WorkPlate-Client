@@ -10,7 +10,7 @@ export const OnBoarding0 = () => {
   const handleChange = (e) => {
     if (e.target.value) {
       setActive(true);
-      localStorage.setItem("name", e.target.value);
+      sessionStorage.setItem("name", e.target.value);
       console.log(e.target.value);
     } else {
       setActive(false); // 입력 값이 지워졌을 때 비활성화

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const SubHeader = ({
   title,
   showLeftButton = false,
-  leftLink = "/",
+  leftLink = "/main",
   showRightButton = false,
   rightLink = "/",
   rightIcon = null,
@@ -15,7 +15,7 @@ const SubHeader = ({
   return (
     <HeaderContainer>
       {showLeftButton ? (
-        <Button onClick={() => navigate(leftLink)}>
+        <Button onClick={() => navigate("/main")}>
           <Icon src={"/icons/back.svg"} />
         </Button>
       ) : (

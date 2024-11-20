@@ -22,7 +22,7 @@ export const CommonButton = ({ children, $index, setActive, type = "exp" }) => {
     setStatus(!status); // 클릭 상태 토글
 
     // 기존 데이터를 가져옵니다.
-    const existingData = JSON.parse(localStorage.getItem(type)) || [];
+    const existingData = JSON.parse(sessionStorage.getItem(type)) || [];
     if (existingData) {
       setActive(true);
     }
@@ -35,8 +35,8 @@ export const CommonButton = ({ children, $index, setActive, type = "exp" }) => {
       updatedData = existingData.filter((item) => item !== children);
     }
 
-    // 업데이트된 데이터를 localStorage에 저장
-    localStorage.setItem(type, JSON.stringify(updatedData));
+    // 업데이트된 데이터를 sessionStorage에 저장
+    sessionStorage.setItem(type, JSON.stringify(updatedData));
   };
 
   return (

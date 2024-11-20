@@ -61,7 +61,7 @@ export const OnBoarding4 = () => {
       <BackNavigation />
       <ProgressBar $now={4} />
       <S.TitleWrapper>
-        <S.MainTitle>{localStorage.getItem("name")}의</S.MainTitle>
+        <S.MainTitle>{sessionStorage.getItem("name")}의</S.MainTitle>
         <S.MainTitle>건강 상태를 알려주세요.</S.MainTitle>
       </S.TitleWrapper>
 
