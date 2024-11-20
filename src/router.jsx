@@ -7,6 +7,7 @@ import FoodMainPage from "@pages/foodMainPage/FoodMainPage";
 import ChatBotPage from "@pages/chatBotPage/ChatBotPage";
 import { OnBoarding } from "@pages/onBoarding/OnBoarding";
 import { Intro } from "@pages/intro/Intro";
+import { OnBoarding2 } from "@pages/onBoarding/OnBoarding2";
 
 const router = createBrowserRouter([
   {
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
         element: <WorkMainPage />,
       },
       {
-        path: "/onboarding/:pageNumber",
+        path: "/onboarding/1",
         element: <OnBoarding />,
+      },
+      {
+        path: "/onboarding/2",
+        element: <OnBoarding2 />,
       },
       {
         path: "/intro",

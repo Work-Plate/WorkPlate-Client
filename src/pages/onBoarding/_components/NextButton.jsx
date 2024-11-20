@@ -17,9 +17,8 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export const NextButton = ({ isActive = false, setNextAction, next }) => {
+export const NextButton = ({ isActive = false, setNextAction, next, now }) => {
   const navigate = useNavigate();
-  const params = useParams();
 
   const handleNextAction = () => {
     if (next === "change") {
@@ -27,7 +26,7 @@ export const NextButton = ({ isActive = false, setNextAction, next }) => {
       console.log(next);
     }
     if (next === "navigate") {
-      navigate(`/onboarding/${Number(params.pageNumber) + 1}`);
+      navigate(`/onboarding/${now + 1}`);
     }
   };
   return (

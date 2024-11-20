@@ -50,3 +50,19 @@ export const GenderBox = styled.div`
   color: ${({ $isClicked }) => ($isClicked ? "#FF854C" : "#707E86")};
   cursor: pointer;
 `;
+
+export const ButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+  gap: 20px;
+  margin-bottom: 10rem;
+`;
+
+export const ButtonRow = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 10px;
+`;
