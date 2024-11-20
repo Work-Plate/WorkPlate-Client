@@ -166,3 +166,27 @@ export const FinishBtn = styled.button`
   margin-top: 4rem;
   margin-bottom: 2rem;
 `;
+
+export const NameInput = styled.input`
+  display: flex;
+  width: 90%;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-bottom: 2px solid var(--gray-200, #eee);
+  color: black;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  &::placeholder {
+    color: var(--gray-300, #ccc);
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+`;

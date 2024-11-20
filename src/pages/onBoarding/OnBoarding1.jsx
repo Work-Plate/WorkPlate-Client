@@ -6,7 +6,7 @@ import { useLocation, useParams } from "react-router-dom";
 import { useState } from "react";
 import { DatePicker } from "./_components/DatePicker";
 
-export const OnBoarding = () => {
+export const OnBoarding1 = () => {
   const params = useParams();
   const location = useLocation();
   console.log(location.pathname);
@@ -16,7 +16,7 @@ export const OnBoarding = () => {
   return (
     <S.Wrapper>
       <BackNavigation />
-      <ProgressBar $now={Number(params.pageNumber)} />
+      <ProgressBar $now={1} />
       <S.TitleWrapper>
         <S.MainTitle>{localStorage.getItem("name")}님의</S.MainTitle>
         {next === "change" ? (

@@ -119,7 +119,7 @@ export const Intro = () => {
   const navigate = useNavigate();
   const handleSignUp = () => {
     localStorage.setItem("name", "김영수");
-    navigate("/onboarding/1");
+    navigate("/onboarding/0");
   };
   return (
     <Layout>
