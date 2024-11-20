@@ -136,7 +136,7 @@ export const WorkMainPage = () => {
           align="left"
           margin="0.4rem  0 0 1rem"
         >
-          김영수 님
+          {sessionStorage.getItem("name") || "guest"}님
         </Text>
         <Text
           size="1.5rem"
@@ -155,7 +155,7 @@ export const WorkMainPage = () => {
           align="left"
           margin="2rem 0 0 1rem"
         >
-          김영수 님을 위한 추천 소일거리 👍
+          {sessionStorage.getItem("name") || "guest"}님을 위한 추천 소일거리 👍
         </Text>
         <PopularWork imageUrls={recommendImageUrls} />
         <Text

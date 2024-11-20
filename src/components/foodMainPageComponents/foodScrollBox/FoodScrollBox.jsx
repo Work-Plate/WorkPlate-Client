@@ -13,7 +13,7 @@ const FoodScrollBox = ({ children }) => {
         align="left"
         margin="2rem 0 0 1rem"
       >
-        김영수 님,
+        {sessionStorage.getItem("name") || "guest"}님,
       </Text>
 
       <Text
