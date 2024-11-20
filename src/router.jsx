@@ -12,6 +12,8 @@ import { OnBoarding2 } from "@pages/onBoarding/OnBoarding2";
 import { OnBoarding3 } from "@pages/onBoarding/OnBoarding3";
 import { OnBoarding4 } from "@pages/onBoarding/OnBoarding4";
 
+import { QR } from "@pages/qr/QR";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -60,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/intro",
         element: <Intro />,
+      },
+      {
+        path: "/qr",
+        element: <QR />,
       },
     ],
   },

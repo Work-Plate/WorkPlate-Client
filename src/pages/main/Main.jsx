@@ -132,7 +132,9 @@ export const Main = () => {
             </S.MainBoxSecondWrapper>
           </S.MainBox>
         </S.MainBoxWrapper>
-        <S.qrButton>QR 코드로 결제하기</S.qrButton>
+        <S.qrButton onClick={() => navigate("/qr")}>
+          QR 코드로 결제하기
+        </S.qrButton>
       </S.MainContainer>
       <S.WorkTitle>지금 할 수 있는 소일거리</S.WorkTitle>
       <CloseWork panelsData={panelsData} />

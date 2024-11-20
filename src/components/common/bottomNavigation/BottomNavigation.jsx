@@ -17,8 +17,7 @@ export const BottomNavigation = () => {
     } else if (index === 2) {
       navigate("/food");
     } else {
-      navigate("/main");
-      // 수정예정
+      navigate("/qr");
     }
   };
 
