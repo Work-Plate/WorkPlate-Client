@@ -5,10 +5,12 @@ import { Main } from "@pages/main/Main";
 import { WorkMainPage } from "@pages/workMainPage/WorkMainPage";
 import FoodMainPage from "@pages/foodMainPage/FoodMainPage";
 import ChatBotPage from "@pages/chatBotPage/ChatBotPage";
-import { OnBoarding } from "@pages/onBoarding/OnBoarding";
 import { Intro } from "@pages/intro/Intro";
+import { OnBoarding0 } from "@pages/onBoarding/OnBoarding0";
+import { OnBoarding1 } from "@pages/onBoarding/OnBoarding1";
 import { OnBoarding2 } from "@pages/onBoarding/OnBoarding2";
 import { OnBoarding3 } from "@pages/onBoarding/OnBoarding3";
+import { OnBoarding4 } from "@pages/onBoarding/OnBoarding4";
 
 const router = createBrowserRouter([
   {
@@ -36,8 +38,12 @@ const router = createBrowserRouter([
         element: <WorkMainPage />,
       },
       {
+        path: "/onboarding/0",
+        element: <OnBoarding0 />,
+      },
+      {
         path: "/onboarding/1",
-        element: <OnBoarding />,
+        element: <OnBoarding1 />,
       },
       {
         path: "/onboarding/2",
@@ -46,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/onboarding/3",
         element: <OnBoarding3 />,
+      },
+      {
+        path: "/onboarding/4",
+        element: <OnBoarding4 />,
       },
       {
         path: "/intro",
