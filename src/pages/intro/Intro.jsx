@@ -117,6 +117,10 @@ export const LoginButton = styled.button`
 
 export const Intro = () => {
   const navigate = useNavigate();
+  const handleSignUp = () => {
+    localStorage.setItem("name", "김영수");
+    navigate("/onboarding/1");
+  };
   return (
     <Layout>
       <ImageWrapper />
@@ -129,9 +133,7 @@ export const Intro = () => {
           <SubText>간단한 매칭으로 적합한 일자리를 찾고,</SubText>
           <SubText>할인된 식사로 생활의 여유를 더하세요.</SubText>
         </TextWrapper>
-        <SignUpButton onClick={() => navigate("/onboarding/1")}>
-          회원가입
-        </SignUpButton>
+        <SignUpButton onClick={handleSignUp}>회원가입</SignUpButton>
         <LoginButton onClick={() => navigate("/main")}>로그인</LoginButton>
       </Wrapper>
     </Layout>
