@@ -12,7 +12,9 @@ export const OnBoarding1 = () => {
   console.log(location.pathname);
   const [isClicked, setClicked] = useState(null);
   const [next, setNext] = useState("change");
-  const [startDate, setStartDate] = useState(new Date());
+  const fiftyYearsAgo = new Date();
+  fiftyYearsAgo.setFullYear(fiftyYearsAgo.getFullYear() - 60);
+  const [startDate, setStartDate] = useState(fiftyYearsAgo);
   return (
     <S.Wrapper>
       <BackNavigation />
