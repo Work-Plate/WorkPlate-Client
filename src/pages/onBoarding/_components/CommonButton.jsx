@@ -15,14 +15,14 @@ const Wrapper = styled.button`
   cursor: pointer;
 `;
 
-export const CommonButton = ({ children, $index, setActive }) => {
+export const CommonButton = ({ children, $index, setActive, type = "exp" }) => {
   const [status, setStatus] = useState(false);
 
   const handleClick = (index, children) => {
     setStatus(!status); // 클릭 상태 토글
 
     // 기존 데이터를 가져옵니다.
-    const existingData = JSON.parse(localStorage.getItem("exp")) || [];
+    const existingData = JSON.parse(localStorage.getItem(type)) || [];
     if (existingData) {
       setActive(true);
     }
@@ -36,7 +36,7 @@ export const CommonButton = ({ children, $index, setActive }) => {
     }
 
     // 업데이트된 데이터를 localStorage에 저장
-    localStorage.setItem("exp", JSON.stringify(updatedData));
+    localStorage.setItem(type, JSON.stringify(updatedData));
   };
 
   return (

@@ -3,34 +3,31 @@ import { ProgressBar } from "@components/progressBar/ProgressBar";
 import { BackNavigation } from "./_components/BackNavigation";
 import { NextButton } from "./_components/NextButton";
 import { CommonButton } from "./_components/CommonButton";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const BTN_DATA = [
-  "🍳 요리·서빙",
-  "🏢 건설·토목·노무",
-  "⚙️ 생산·기술",
-  "📦 운전·배달·물류",
-  "🤝 서비스",
-  "🛒 유통·판매",
-  "🍿 문화·여가·생활",
-  "🖥️ 사무·회계·IT",
-  "📞 영업·상담",
-  "🩺 요양·간호·의료",
-  "🎓 교육·강사",
+  "🧑‍🤝‍🧑 사람을 많이 만나는 업무",
+  "🧑‍💻️ 혼자 하는 업무",
+  "🌳 실외업무",
+  "📂 실내업무",
+  "🏃‍♂️ 활동적",
+  "🎨 창의적",
+  "💡 기술적",
+  "기타",
 ];
 
-export const OnBoarding2 = () => {
-  const [next, setNext] = useState("navigate");
-  const [active, setActive] = useState(false);
+export const OnBoarding3 = () => {
+  const [active, setActive] = useState(false); // 다음 버튼 활성화 상태
   const [expData, setExpData] = useState(() => {
-    // `localStorage` 초기 데이터 로드
-    const storedData = localStorage.getItem("exp");
+    const storedData = localStorage.getItem("want");
     return storedData ? JSON.parse(storedData) : [];
   });
 
+  // `expData`가 업데이트될 때 버튼 활성화 여부 확인
   useEffect(() => {
-    // `expData`가 업데이트될 때 버튼 활성화 여부 확인
-    setActive(expData.length > 0);
+    if (expData.length > 0) {
+      setActive(true);
+    }
   }, [expData]);
 
   const handleButtonClick = (buttonText) => {
@@ -40,7 +37,7 @@ export const OnBoarding2 = () => {
         : [...prevData, buttonText];
 
       // `localStorage` 업데이트
-      localStorage.setItem("exp", JSON.stringify(updatedData));
+      localStorage.setItem("want", JSON.stringify(updatedData));
       return updatedData;
     });
   };
@@ -48,13 +45,14 @@ export const OnBoarding2 = () => {
   return (
     <S.Wrapper>
       <BackNavigation />
-      <ProgressBar $now={2} />
+      <ProgressBar $now={3} />
       <S.TitleWrapper>
-        <S.MainTitle>{localStorage.getItem("name")}님의</S.MainTitle>
-        <S.MainTitle>경험을 알려주세요</S.MainTitle>
+        <S.MainTitle>{localStorage.getItem("name")}님이 원하시는</S.MainTitle>
+        <S.MainTitle>직무를 알려주세요.</S.MainTitle>
       </S.TitleWrapper>
       <S.ButtonContainer>
         {BTN_DATA.reduce((rows, buttonText, index) => {
+          // 2개씩 버튼을 묶어서 행으로 나누기
           if (index % 2 === 0) {
             rows.push([buttonText]);
           } else {
@@ -63,12 +61,13 @@ export const OnBoarding2 = () => {
           return rows;
         }, []).map((row, rowIndex) => (
           <S.ButtonRow key={rowIndex}>
-            {row.map((buttonText, index) => (
+            {row.map((buttonText) => (
               <CommonButton
-                key={index}
+                key={buttonText}
                 isActive={expData.includes(buttonText)} // 버튼 활성화 여부
                 onClick={() => handleButtonClick(buttonText)}
                 setActive={setActive}
+                type="want"
               >
                 {buttonText}
               </CommonButton>
@@ -76,12 +75,7 @@ export const OnBoarding2 = () => {
           </S.ButtonRow>
         ))}
       </S.ButtonContainer>
-      <NextButton
-        isActive={active}
-        setNextAction={setNext}
-        next={next}
-        now={2}
-      />
+      <NextButton isActive={active} next={"navigate"} now={3} />
     </S.Wrapper>
   );
 };
