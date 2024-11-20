@@ -7,27 +7,12 @@ import UserTextBalloon from "../../components/chatBotPageComponent/userTextBallo
 import UserInput from "../../components/chatBotPageComponent/userInput/UserInput";
 import ChatbotRecommendScroll from "../../components/chatBotPageComponent/chatbotRecommendScroll/ChatbotRecommendScroll";
 import { PageContainer } from "./ChatBotPage.styled";
+import { sendUserMessage } from "../../apis/chatbot";
+import { speakText } from "../../utils/speakText";
 
 const ChatBotPage = () => {
-  const images = [
-    "/ChatbotRecommendScrollImage/ChatbotRecommendScroll1.svg",
-    "/ChatbotRecommendScrollImage/ChatbotRecommendScroll1.svg",
-    "/ChatbotRecommendScrollImage/ChatbotRecommendScroll1.svg",
-  ];
-
-  const [messages, setMessages] = useState([
-    {
-      sender: "user",
-      type: "text",
-      text: "근처 식당 찾아줘",
-    },
-    {
-      sender: "bot",
-      type: "text",
-      text: "근처에 있는 밥상일터 식당을 찾아드릴게요",
-    },
-    { sender: "bot", type: "recommend", images: images },
-  ]);
+  const memberId = "celina324"; // 예시로 고정된 member_id
+  const [messages, setMessages] = useState([]);
 
   const [inputValue, setInputValue] = useState("");
   const chatBoxRef = useRef(null);
@@ -43,28 +28,51 @@ const ChatBotPage = () => {
     setInputValue(value);
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputValue.trim()) {
+      const userMessage = inputValue;
       setMessages((prevMessages) => [
         ...prevMessages,
-        { sender: "user", type: "text", text: inputValue },
+        { sender: "user", type: "text", text: userMessage },
       ]);
       setInputValue("");
 
-      if (inputValue.includes("추천")) {
-        setTimeout(() => {
+      try {
+        // 서버로 사용자 메시지 전송 및 응답 수신
+        const response = await sendUserMessage(userMessage, memberId);
+        const { task_type, text, additional_data } = response;
+
+        // 챗봇 응답을 추가
+        if (task_type === "job_recommend" && additional_data?.job_id_list) {
+          // 추천 작업일 경우, 이미지 슬라이드 형태로 보여줌
           setMessages((prevMessages) => [
             ...prevMessages,
-            { sender: "bot", type: "recommend", images: images },
+            { sender: "bot", type: "text", text: text },
+            {
+              sender: "bot",
+              type: "recommend",
+              images: additional_data.job_id_list,
+            },
           ]);
-        }, 1000);
-      } else {
-        setTimeout(() => {
+          speakText(text);
+        } else {
+          // 일반 대화일 경우 텍스트만 추가
           setMessages((prevMessages) => [
             ...prevMessages,
-            { sender: "bot", type: "text", text: "냠냠" },
+            { sender: "bot", type: "text", text: text },
           ]);
-        }, 1000);
+          speakText(text);
+        }
+      } catch (error) {
+        console.error("메시지 전송 오류:", error);
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          {
+            sender: "bot",
+            type: "text",
+            text: "죄송합니다. 응답 중 오류가 발생했습니다.",
+          },
+        ]);
       }
     }
   };

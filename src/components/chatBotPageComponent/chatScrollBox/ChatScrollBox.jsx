@@ -13,7 +13,7 @@ const ChatScrollBox = forwardRef(({ children }, ref) => {
         color="#0C0E27"
         weight="500"
         align="left"
-        margin="1.6rem 0 0 1rem"
+        margin="5.3rem 0 0 1rem"
       >
         안녕하세요! 만나서 반갑습니다. <br />
         밥상일터 사용을 도와드릴게요.

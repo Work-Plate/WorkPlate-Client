@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const PanelContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 텍스트와 이미지를 양쪽에 배치 */
+  justify-content: space-between;
 `;
 
 export const TextContainer = styled.div`
